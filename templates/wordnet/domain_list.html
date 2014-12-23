@@ -1,0 +1,12 @@
+{% extends "GoalPost_base.html" %}
+
+{% block title %}Definition List{% endblock %}
+
+{% block content %}
+    {% include 'sortable_listview/sort_links.html' %}
+    {% include 'sortable_listview/pagination.html' %}
+    {% for domain in object_list %}
+        <p><a href="/wordnet/domain/{{ domain.id }}/">{{ domain.name }}</a></p>
+    {% endfor %}
+    {% include 'sortable_listview/pagination.html' %}
+{% endblock %}

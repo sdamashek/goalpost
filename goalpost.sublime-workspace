@@ -1,0 +1,1054 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Penn",
+				"PennAppsBotFactory"
+			],
+			[
+				"Resour",
+				"ResourceCreateView"
+			],
+			[
+				"Defii",
+				"DefinitionAdmin"
+			],
+			[
+				"Supervise",
+				"SupervisedDataSet"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"AUT",
+				"AUTH_TOKEN_SECRET"
+			],
+			[
+				"point",
+				"point"
+			],
+			[
+				"s",
+				"s"
+			],
+			[
+				"canny",
+				"cannyTransform"
+			],
+			[
+				"alert_",
+				"alert_on_find"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"HttpRe",
+				"HttpResponse"
+			],
+			[
+				"HttpRes",
+				"HttpResponseRedirect"
+			],
+			[
+				"HT",
+				"HttpResponseRedirect"
+			],
+			[
+				"Http",
+				"HttpResponseRedirect"
+			],
+			[
+				"Cus",
+				"Customer"
+			],
+			[
+				"Item",
+				"ItemViewSet"
+			],
+			[
+				"Cat",
+				"CategorySerializer"
+			],
+			[
+				"serializ",
+				"serializer_class"
+			],
+			[
+				"User",
+				"UserSerializer"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "account/views.py",
+			"settings":
+			{
+				"buffer_size": 1717,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wordnet/urls.py",
+			"settings":
+			{
+				"buffer_size": 653,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GoalPost/settings.py",
+			"settings":
+			{
+				"buffer_size": 2452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "experience/urls.py",
+			"settings":
+			{
+				"buffer_size": 667,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/projects/pennappsbot/bot.py",
+			"settings":
+			{
+				"buffer_size": 2202,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "The application embeds a generic HTTP server component that is used as a caching proxy for playing video recordings. This server is misconfigured and accepts requests from any client, local or remote, allowing attackers to connect to it and use a victim's device as an open proxy.",
+			"settings":
+			{
+				"buffer_size": 280,
+				"line_ending": "Windows",
+				"name": "The application embeds a generic HTTP server compo"
+			}
+		},
+		{
+			"file": "/D/projects/goalpost/camps.json",
+			"settings":
+			{
+				"buffer_size": 97620,
+				"line_ending": "Windows",
+				"name": "[{\"url\": \"http://parktakes.fairfaxcounty.gov/rev1_"
+			}
+		},
+		{
+			"file": "GoalPost/urls.py",
+			"settings":
+			{
+				"buffer_size": 551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "account/models.py",
+			"settings":
+			{
+				"buffer_size": 405,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "account/admin.py",
+			"settings":
+			{
+				"buffer_size": 381,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "experience/views.py",
+			"settings":
+			{
+				"buffer_size": 2153,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "experience/admin.py",
+			"settings":
+			{
+				"buffer_size": 128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "experience/models.py",
+			"settings":
+			{
+				"buffer_size": 1104,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "camps.json",
+			"settings":
+			{
+				"buffer_size": 34047,
+				"line_ending": "Windows",
+				"name": "[{\"url\": \"http://parktakes.fairfaxcounty.gov/rev1_"
+			}
+		},
+		{
+			"file": "templates/experience/camp_list.html",
+			"settings":
+			{
+				"buffer_size": 453,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/experience/camp_form.html",
+			"settings":
+			{
+				"buffer_size": 292,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/GoalPost_base.html",
+			"settings":
+			{
+				"buffer_size": 2541,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from django.db import models\nfrom django.contrib.auth.models import User\nimport reversion\n\nclass Definition(models.Model):\n    term = models.CharField(max_length=200, null=True)\n    definition = models.TextField(null=True)\n    lexical_id = models.CharField(max_length=300, null=True, blank=True)\n    instance_of = models.ManyToManyField('self', null=True, related_name=\"parent_of\", symmetrical=False, blank=True)\n    domain = models.ForeignKey('Domain', null=True, blank=True)\n\n    def __unicode__(self):\n        return self.term\n\n    def get_absolute_url(self):\n        return \"/wordnet/{}/\".format(self.id)\n\nclass Domain(models.Model):\n    name = models.CharField(max_length=300)\n\n    def __unicode__(self):\n        return self.name\n\n    def get_absolute_url(self):\n        return \"/wordnet/domain/{}/\".format(self.id)\n\n#class Submission(models.Model):\n#   term = models.CharField(max_length=200)\n#   definition = models.TextField()\n#   instance_of = models.ManyToManyField(Definition, null=True, symmetrical=False)\n#   submitter = models.ForeignKey(User)",
+			"file": "wordnet/models.py",
+			"file_size": 1057,
+			"file_write_time": 130500065078774987,
+			"settings":
+			{
+				"buffer_size": 1057,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/python3.sublime-build",
+	"command_palette":
+	{
+		"height": 292.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 384.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"help",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/projects/scrapy.py",
+		"/C/Python27/Lib/site-packages/rating/urls.py",
+		"/D/projects/goalpost/GoalPost/templates/experience/resource_form.html",
+		"/D/projects/goalpost/GoalPost/GoalPost/urls.py",
+		"/D/projects/goalpost/GoalPost/resource/models.py",
+		"/D/projects/goalpost/GoalPost/templates/GoalPost_base.html",
+		"/D/projects/goalpost/GoalPost/GoalPost/settings.py",
+		"/D/projects/goalpost/GoalPost/wordnet/admin.py",
+		"/D/projects/goalpost/GoalPost/templates/account/login.html",
+		"/D/projects/goalpost/GoalPost/account/urls.py",
+		"/D/projects/goalpost/GoalPost/templates/index.html",
+		"/D/projects/goalpost/GoalPost/templates/account/create.html",
+		"/D/projects/goalpost/GoalPost/wordnet/views.py",
+		"/D/projects/goalpost/GoalPost/wordnet/models.py",
+		"/D/projects/goalpost/GoalPost/media/carhartl-jquery-cookie-92b7715/jquery.cookie.js",
+		"/D/projects/goalpost/GoalPost/wordnet/urls.py",
+		"/D/projects/goalpost/GoalPost/templates/wordnet/definition_detail.html",
+		"/D/Downloads/weechat5.rst",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0005_auto_20140710_1245.py",
+		"/D/Downloads/weechat4.rst",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0006_definition_domain.py",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0006_auto_20140710_1259.py",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0007_auto_20140710_1342.py",
+		"/D/projects/goalpost/GoalPost/templates/wordnet/domain_list.html",
+		"/D/Downloads/weechat2.rst",
+		"/D/projects/goalpost/GoalPost/templates/wordnet/definition_list.html",
+		"/D/projects/goalpost/GoalPost/templates/wordnet/domain_list.py",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0005_auto_20140709_2302.py",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0005_definition_domain.py",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0004_auto_20140709_2225.py",
+		"/D/projects/goalpost/GoalPost/wordnet/migrations/0004_auto_20140709_2234.py",
+		"/C/Users/samue_000/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/samue_000/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/projects/goalpost/GoalPost/wordnet/moderator.py",
+		"/home/samuel/projects/goalpost/GoalPost/goalpost.sublime-project",
+		"/home/samuel/projects/goalpost/GoalPost/db.sqlite3",
+		"/home/samuel/code/xor.py",
+		"/home/samuel/code/letterrecognition.py",
+		"/home/samuel/ircpuzzles/competitionbot/plugins/IrcPuzzles/plugin.py",
+		"/home/samuel/ircpuzzles/competitionbot/plugins/IrcPuzzles/README.txt",
+		"/home/samuel/ircpuzzles/competitionbot/plugins/ChannelLogger/plugin.py",
+		"/home/samuel/ircpuzzles/competitionbot/.gitignore",
+		"/home/samuel/ircpuzzles/competitionbot/plugins/IrcPuzzles/database.py",
+		"/home/samuel/projects/codesphere/project/views/__init__.py",
+		"/home/samuel/projects/codesphere/project/templates/base.html",
+		"/home/samuel/projects/codesphere/project/templates/index.html",
+		"/home/samuel/projects/codesphere/project/templates/shortener.html",
+		"/home/samuel/projects/codesphere/project/templates/navbar.html",
+		"/home/samuel/projects/codesphere/project/templates/chat/chat.html",
+		"/home/samuel/projects/codesphere/web.py",
+		"/home/samuel/projects/codesphere/project/views/userpage.py",
+		"/home/samuel/projects/codesphere/project/templates/about.html",
+		"/home/samuel/projects/codesphere/project/utils/__init__.py",
+		"/home/samuel/projects/codesphere/project/views/chat.py",
+		"/home/samuel/projects/codesphere/project/views/projects.py",
+		"/home/samuel/projects/codesphere/project/templates/userpage.html",
+		"/home/samuel/projects/codesphere/Procfile",
+		"/home/samuel/projects/codesphere/project/__init__.py",
+		"/home/samuel/projects/codesphere/project/utils/auth.py",
+		"/home/samuel/projects/codesphere/project/views/bugs.py",
+		"/home/samuel/projects/codesphere/project/routes.py",
+		"/home/samuel/projects/codesphere/project/views/core.py",
+		"/home/samuel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/samuel/projects/codesphere/project/models.py",
+		"/home/samuel/projects/codesphere/project/templates/chat/index.html",
+		"/home/samuel/projects/closings/schools.py",
+		"/home/samuel/projects/2048/ai.py",
+		"/home/samuel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/samuel/code/machineVision.py",
+		"/home/samuel/code/machineVision2.py",
+		"/home/samuel/code/machineVision3.py",
+		"/home/samuel/.config/sublime-text-3/Packages/User/python3.sublime-build",
+		"/home/samuel/projects/freenode-guardian/bot.py",
+		"/home/samuel/projects/botmonitoring.github.io/bot.py",
+		"/home/samuel/projects/fwilcontest/usermanagement/templatetags/__init__.py",
+		"/home/samuel/projects/fwilcontest/fwilcontest/templates/viewcustomers.html",
+		"/home/samuel/projects/fwilcontest/fwilcontest/templates/viewitems.html",
+		"/home/samuel/projects/fwilcontest/fwilcontest/templates/edit_button.html",
+		"/home/samuel/projects/fwilcontest/usermanagement/admin.py",
+		"/home/samuel/projects/fwilcontest/fwilcontest/urls.py",
+		"/home/samuel/projects/fwilcontest/usermanagement/serializers.py",
+		"/home/samuel/projects/fwilcontest/fwilcontest/templates/manage.html",
+		"/home/samuel/projects/fwilcontest/fwilcontest/templates/index.html",
+		"/home/samuel/projects/fwilcontest/fwilcontest/templates/base.html",
+		"/home/samuel/Documents/code/web/bouncerstation-web.sublime-project",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/app.py",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/templates/base.html",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/templates/who.html",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/templates/dashboard.html",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/.floo",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/templates/test",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/moxy test",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/users.conf",
+		"/home/samuel/.floorc",
+		"/home/samuel/floobits/share/Bouncer_Station/Webapp/doge is test"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">\n",
+			"I",
+			"I ",
+			" I ",
+			"script help",
+			"/script",
+			"script",
+			"Paginator",
+			"                ",
+			"doJoin",
+			"sent to",
+			"join",
+			"doJoin",
+			"channels",
+			"print",
+			"message",
+			"schools",
+			"site",
+			"delay_regex",
+			"	",
+			"trans",
+			"	",
+			"\\u000f",
+			"\\u000308",
+			"GOT PUB",
+			"delete_item",
+			">\n",
+			"category",
+			"TEMPLATE_CON",
+			"#    ",
+			"log",
+			">\n"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"schools.schools",
+			"    ",
+			"\\u000f\\u0002",
+			"\\u000f"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 14,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "account/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1536,
+								1536
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wordnet/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "GoalPost/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								913,
+								913
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "experience/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/projects/pennappsbot/bot.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								598,
+								598
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								280
+							]
+						],
+						"settings":
+						{
+							"auto_name": "The application embeds a generic HTTP server compo",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/projects/goalpost/camps.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 97620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97620,
+								97620
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[{\"url\": \"http://parktakes.fairfaxcounty.gov/rev1_",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 6475.0,
+						"translation.y": 2074.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "GoalPost/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "account/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "account/admin.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "experience/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								668,
+								668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "experience/admin.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "experience/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1103,
+								1103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "camps.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34047,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33274,
+								33274
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[{\"url\": \"http://parktakes.fairfaxcounty.gov/rev1_",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 645.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "templates/experience/camp_list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "templates/experience/camp_form.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "templates/GoalPost_base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2541,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1300,
+								1300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "wordnet/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"project": "goalpost.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

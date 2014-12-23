@@ -1,0 +1,59 @@
+{% extends "GoalPost_base.html" %}
+
+{% block title %}Definition Detail{% endblock %}
+
+{% block content %}
+<h1>{{ object.term }}</h1>
+<p>Id: {{ object.lexical_id }}</p><br/>
+    <table>
+        <tr>
+            <td>
+                <input type="text" value="{{ object.definition }}" style="display: none; width:300px;" id="definitionedit"><span id="definition">{{ object.definition }}</span>
+            </td>
+            <td>
+                <a href="#" id="definitionlink">Edit</a><a href="#" id="definitiondone" style="display:none;">Done</a><br/>
+            </td>
+        </tr>
+    </table>
+    <b>Parent of:</b> {% for child in object.parent_of.all %}<a href="/wordnet/{{ child.id }}/">{{ child.term }}</a> {% endfor %}<br/>
+    <b>Instance of:</b> {% for parent in object.instance_of.all %}<a href="/wordnet/{{ parent.id }}/">{{ parent.term }}</a> {% endfor %}<br/>
+{% endblock %}
+
+{% block script %}
+<script>
+$("#definitionlink").click(function(event){
+    event.preventDefault();
+    $("#definitionedit").css('display','block');
+    $("#definition").css('display','none');
+    $("#definitionlink").css('display','none');
+    $("#definitiondone").css('display','block');
+});
+$("#definitiondone").click(function(event){
+    event.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: '/wordnet/edit/',
+        dataType: "text",
+        data: JSON.stringify({'id': {{ object.id }}, 'field': 'definition', 'value': $("#definitionedit").val()}),
+        success: function(response){
+            $("#definition").text($("#definitionedit").val());
+            $("#definitionedit").css('display','none');
+            $("#definition").css('display','block');
+            $("#definitionlink").css('display','block');
+            $("#definitiondone").css('display','none');
+        },
+        error: function(jqXHR, textStatus, error){
+            alert("Error "+jqXHR.status+": "+jqXHR.responseText);
+        }
+    });
+});
+</script>
+{% endblock %}
+
+{% block head %}
+<style>
+table tr td {
+    padding-right:10px;
+}
+</style>
+{% endblock %}

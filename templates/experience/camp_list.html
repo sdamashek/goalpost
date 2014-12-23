@@ -1,0 +1,12 @@
+{% extends "GoalPost_base.html" %}
+
+{% block title %}Camp List{% endblock %}
+
+{% block content %}
+    {% include 'sortable_listview/sort_links.html' %}
+    {% include 'sortable_listview/pagination.html' %}
+    {% for experience in object_list %}
+        <p><b><a href="/experience/{{ experience.id }}/">{{ experience.name }}</a>:</b> {{ experience.description }}</p>
+    {% endfor %}
+    {% include 'sortable_listview/pagination.html' %}
+{% endblock %}

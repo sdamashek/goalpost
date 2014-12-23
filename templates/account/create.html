@@ -1,0 +1,26 @@
+{% extends "GoalPost_base.html" %}
+
+{% block title %}Create Account{% endblock %}
+
+{% block content %}
+<form action="" method="POST" role="form">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Create Account</button>
+</form>
+{% endblock %}

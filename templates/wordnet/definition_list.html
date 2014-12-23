@@ -1,0 +1,12 @@
+{% extends "GoalPost_base.html" %}
+
+{% block title %}Definition List{% endblock %}
+
+{% block content %}
+    {% include 'sortable_listview/sort_links.html' %}
+    {% include 'sortable_listview/pagination.html' %}
+    {% for definition in object_list %}
+        <p><b><a href="/wordnet/{{ definition.id }}/">{{ definition.term }}</a>:</b> {{ definition.definition }}</p>
+    {% endfor %}
+    {% include 'sortable_listview/pagination.html' %}
+{% endblock %}
